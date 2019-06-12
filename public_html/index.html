@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Líneas políticas</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+
+  </header>
+
+  <section>
+
+  </section>
+
+  <script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('section');
+
+    var requestURL = 'http://localhost:8383/JSONejemplo/exponentes.json';
+
+    var request = new XMLHttpRequest();
+
+    request.open('GET', requestURL);
+
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function() {
+      var linea = request.response;
+      completaHeader(linea);
+      muestraExponentes(linea);
+    }
+
+    function completaHeader(jsonObj) {
+      var miH1 = document.createElement('h1');
+      miH1.textContent = 'línea ' + jsonObj['linea'];
+      header.appendChild(miH1);
+
+      var miPara = document.createElement('p');
+      miPara.textContent = 'fundación: ' + jsonObj['fundacion'];
+      header.appendChild(miPara);
+    }
+
+    function muestraExponentes(jsonObj) {
+      var exponentes = jsonObj['exponentes'];
+
+      for (var i = 0; i < exponentes.length; i++) {
+        var miArticle = document.createElement('article');
+        var miH2 = document.createElement('h2');
+        var miPara1 = document.createElement('p');
+        var miPara2 = document.createElement('p');
+        var miLista = document.createElement('ul');
+
+        miH2.textContent = exponentes[i].nombre;
+        miPara1.textContent = 'siglo: ' + exponentes[i].siglo;
+        miPara2.textContent = 'hitos:';
+
+        var hitos = exponentes[i].hitos;
+        for (var j = 0; j < hitos.length; j++) {
+          var listItem = document.createElement('li');
+          listItem.textContent = hitos[j];
+          miLista.appendChild(listItem);
+        }
+
+        miArticle.appendChild(miH2);
+        miArticle.appendChild(miPara1);
+        miArticle.appendChild(miPara2);
+        miArticle.appendChild(miLista);
+
+        section.appendChild(miArticle);
+      }
+    }
+  </script>
+</body>
+
+</html>
