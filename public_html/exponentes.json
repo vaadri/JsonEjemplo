@@ -1,33 +1,15 @@
 {
-  "linea" : "nacional",
-  "fundacion" : 1810,
+  "linea" : "entreguista",
+  "fundacion" : 1492,
   "exponentes" : [
     {
-      "nombre" : "José de San Martín",
+      "nombre" : "Mitre",
       "siglo" : 19,
       "hitos" : [
-        "Creación del campamento del Plumerillo",
-        "Cruce de los Andes",
-        "Liberó al Alto Perú"
-      ]
-    },
-    {
-      "nombre" : "Juán Manuel de Rosas",
-      "siglo" : 19,
-      "hitos" : [
-        "La ley de aduanas",
-        "Sitio a Montevideo",
-        "Batalla de la Vuelta de Obligado"
-      ]
-    },
-    {
-      "nombre" : "Juán Perón",
-      "siglo" : 20,
-      "hitos" : [
-        "Puso fin a la década infame",
-        "El 17 de Octubre",
-        "El retorno en 1973"
+        "Alianza con Inglaterra"
+        
       ]
     }
+    
   ]
 }
