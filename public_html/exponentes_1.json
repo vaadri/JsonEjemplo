@@ -4,6 +4,7 @@
   "exponentes" : [
     {
       "nombre" : "José de San Martín",
+      "urlImagen" : "https://upload.wikimedia.org/wikipedia/commons/d/d1/Jos%C3%A9_de_San_Mart%C3%ADn_%28retrato%2C_c.1828%29.jpg",
       "siglo" : 19,
       "hitos" : [
         "Creación del campamento del Plumerillo",
@@ -14,6 +15,7 @@
     {
       "nombre" : "Juán Manuel de Rosas",
       "siglo" : 19,
+      "urlImagen" :"https://upload.wikimedia.org/wikipedia/commons/5/5d/Juan_Manuel_de_Rosas.jpg",
       "hitos" : [
         "La ley de aduanas",
         "Sitio a Montevideo",
@@ -21,8 +23,9 @@
       ]
     },
     {
-      "nombre" : "Hipólito Irigoyen",
+      "nombre" : "Hipólito Yrigoyen",
       "siglo" : 20,
+      "urlImagen" :"https://upload.wikimedia.org/wikipedia/commons/f/ff/Retrato_Yrigoyen_Museo_Bicentenario.jpg",
       "hitos" : [
         "Triunfo luego de la promulgación de ley Sanz Peña",
         "Creación de YPF",
@@ -33,6 +36,7 @@
     {
       "nombre" : "Juán Perón",
       "siglo" : 20,
+      "urlImagen" :"https://upload.wikimedia.org/wikipedia/commons/9/98/Juan_Peron_con_banda_de_presidente.jpg",
       "hitos" : [
         "Puso fin a la década infame",
         "El 17 de Octubre",

@@ -6,11 +6,13 @@
 
         <title>Líneas políticas</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-
+        <p>Compendio de exponentes de la línea nacional</p>
         <header>
 
         </header>
@@ -53,10 +55,13 @@
                 for (var i = 0; i < exponentes.length; i++) {
                     var miArticle = document.createElement('article');
                     var miH2 = document.createElement('h2');
+                    var miImg = document.createElement('img');
                     var miPara1 = document.createElement('p');
                     var miPara2 = document.createElement('p');
                     var miLista = document.createElement('ul');
                     miH2.textContent = exponentes[i].nombre;
+                    miImg.setAttribute("src", exponentes[i].urlImagen)
+                    miImg.setAttribute("width", "50%");
                     miPara1.textContent = 'siglo: ' + exponentes[i].siglo;
                     miPara2.textContent = 'hitos:';
                     var hitos = exponentes[i].hitos;
@@ -67,6 +72,7 @@
                     }
 
                     miArticle.appendChild(miH2);
+                    miArticle.appendChild(miImg);
                     miArticle.appendChild(miPara1);
                     miArticle.appendChild(miPara2);
                     miArticle.appendChild(miLista);
