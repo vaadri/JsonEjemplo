@@ -22,17 +22,38 @@
         </section>
 
         <script>
-            /* guardo en dos variables la referencia a los elementos
-             header y section del documento html */
+            /* guardo en dos variables la referencia a los
+             * elementos
+             * header y section del documento html */
             var header = document.querySelector('header');
             var section = document.querySelector('section');
+            
+            /*requestURL es simplemente una cadena
+             * con la dirección del recurso. En este caso un
+             * JSON
+             */ 
             var requestURL = 'http://localhost:8383/jsonejemplo/exponentes_1.json';
+            
+            //Intancio un objeto de la clase XMLHttpRequest
             var request = new XMLHttpRequest();
+            
+            /*Llamo al método open y paso por por parámetro
+             * Los argumentos 'GET' del protocolo HTTP
+             * y la dirección del recurso
+             */
             request.open('GET', requestURL);
+            
+            //Le indico que lo que recibe lo trate como JSON
             request.responseType = 'json';
+            
+            //envío la petición
             request.send();
-            request.onload = function () {
+            
+            //Cuando el recurso está cargado:
+            request.onload = function() {
+                //almaceno el JSON en linea
                 var linea = request.response;
+                //Llamo a dos funciones que paso a definir
                 completaHeader(linea);
                 muestraExponentes(linea);
             }
@@ -42,11 +63,11 @@
                 if (jsonObj['linea']) {
                     miH1.textContent = 'línea ' + jsonObj['linea'];
                 } else {
-                    miH1.textContent = ''
+                    miH1.textContent = '';
                 }
                 header.appendChild(miH1);
                 var miPara = document.createElement('p');
-                miPara.textContent = 'fundación: ' + jsonObj['fundacion'];
+                miPara.textContent = 'Pepe: ' + jsonObj['fundacion'];
                 header.appendChild(miPara);
             }
 
